@@ -29,6 +29,7 @@ function getIcpNum(host) {
       if (data.code === "200") {
         icp.innerText = data["网站备案/许可证号"];
 		document.title = data["网站名称"]
+		document.getElementById("logo").innerText = data["网站名称"]
       } else {
         segs.splice(0, 1);
         getIcpNum(segs.join("."));
